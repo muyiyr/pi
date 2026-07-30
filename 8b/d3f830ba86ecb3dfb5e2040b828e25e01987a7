@@ -1,0 +1,22 @@
+packages/coding-agent/examples/sdk/02-custom-model.ts
+  s_d9f505df8e0f1c::t_f652ea87c63a41 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8bd3f830ba86ecb3dfb5e2040b828e25e01987a7",
+  "prompts": {},
+  "sessions": {
+    "s_d9f505df8e0f1c": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a69c013d49cea29a5a46187",
+        "model": "gpt-5.6-sol__max",
+        "display_model_name": "GPT-5.6-Sol"
+      },
+      "human_author": null
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
