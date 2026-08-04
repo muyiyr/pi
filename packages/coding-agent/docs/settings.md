@@ -115,16 +115,24 @@ Set `PI_SKIP_VERSION_CHECK=1` to disable the Pi version update check. Use `--off
 | `compaction.enabled` | boolean | `true` | Enable auto-compaction |
 | `compaction.reserveTokens` | number | `16384` | Tokens reserved for LLM response |
 | `compaction.keepRecentTokens` | number | `20000` | Recent tokens to keep (not summarized) |
+| `compaction.model` | string | Current model | Model used for manual and automatic compaction |
+| `compaction.thinkingLevel` | string | Current thinking level | Thinking level used for compaction |
 
 ```json
 {
   "compaction": {
     "enabled": true,
     "reserveTokens": 16384,
-    "keepRecentTokens": 20000
+    "keepRecentTokens": 20000,
+    "model": "anthropic/claude-haiku-4-5",
+    "thinkingLevel": "high"
   }
 }
 ```
+
+The model and thinking level apply to manual and automatic compaction. Use an exact `provider/model` reference for `compaction.model`; a bare model ID also works when it is unique across providers. When omitted, compaction uses the current session model.
+
+The thinking level accepts `"off"`, `"minimal"`, `"low"`, `"medium"`, `"high"`, `"xhigh"`, or `"max"` and is clamped to the compaction model's capabilities. Explicit `"off"` disables reasoning for compaction. When omitted, compaction inherits the current session thinking level. Branch summarization is unaffected.
 
 ### Branch Summary
 

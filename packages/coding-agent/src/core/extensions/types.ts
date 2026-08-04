@@ -591,6 +591,10 @@ export interface SessionBeforeForkEvent {
 /** Fired before context compaction (can be cancelled or customized) */
 export interface SessionBeforeCompactEvent {
 	type: "session_before_compact";
+	/** Effective request model, including any auth-derived endpoint. */
+	model: Model<Api>;
+	/** Effective thinking level after inheritance and model capability clamping. */
+	thinkingLevel: ThinkingLevel;
 	preparation: CompactionPreparation;
 	branchEntries: SessionEntry[];
 	customInstructions?: string;

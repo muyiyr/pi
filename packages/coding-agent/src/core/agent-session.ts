@@ -24,7 +24,7 @@ import type {
 	PrepareNextTurnContext,
 	ThinkingLevel,
 } from "@earendil-works/pi-agent-core";
-import { contentText } from "@earendil-works/pi-ai";
+import { type Api, contentText } from "@earendil-works/pi-ai";
 import type {
 	AssistantMessage,
 	AuthResult,
@@ -96,6 +96,7 @@ import {
 import { emitSessionShutdownEvent } from "./extensions/runner.ts";
 import type { BashExecutionMessage, CustomMessage } from "./messages.ts";
 import { ModelRegistry } from "./model-registry.ts";
+import { findExactModelReferenceMatch } from "./model-resolver.ts";
 import type { ModelRuntime } from "./model-runtime.ts";
 import { expandPromptTemplate, type PromptTemplate } from "./prompt-templates.ts";
 import type { ResourceExtensionPaths, ResourceLoader } from "./resource-loader.ts";
@@ -1751,6 +1752,27 @@ export class AgentSession {
 		return this.model ? (clampThinkingLevel(this.model, level) as ThinkingLevel) : "off";
 	}
 
+	private _resolveCompactionModel(modelReference: string | undefined): Model<Api> {
+		if (!modelReference) {
+			if (!this.model) {
+				throw new Error(formatNoModelSelectedMessage());
+			}
+			return this.model;
+		}
+
+		const model = findExactModelReferenceMatch(modelReference, [...this._modelRuntime.getModels()]);
+		if (!model) {
+			throw new Error(
+				`Compaction model "${modelReference}" not found. Use an exact model id or provider/model reference.`,
+			);
+		}
+		return model;
+	}
+
+	private _resolveCompactionThinkingLevel(model: Model<Api>, thinkingLevel: ThinkingLevel | undefined): ThinkingLevel {
+		return clampThinkingLevel(model, thinkingLevel ?? this.thinkingLevel) as ThinkingLevel;
+	}
+
 	// =========================================================================
 	// Queue Mode Management
 	// =========================================================================
@@ -1793,14 +1815,11 @@ export class AgentSession {
 		this._emit({ type: "compaction_start", reason: "manual" });
 
 		try {
-			if (!this.model) {
-				throw new Error(formatNoModelSelectedMessage());
-			}
-
-			const { model: requestModel, apiKey, headers, env } = await this._getSummarizationRequestAuth(this.model);
-
 			const pathEntries = this.sessionManager.getBranch();
 			const settings = this.settingsManager.getCompactionSettings();
+			const model = this._resolveCompactionModel(settings.model);
+			const thinkingLevel = this._resolveCompactionThinkingLevel(model, settings.thinkingLevel);
+			const { model: requestModel, apiKey, headers, env } = await this._getSummarizationRequestAuth(model);
 
 			const preparation = prepareCompaction(pathEntries, settings);
 			if (!preparation) {
@@ -1818,6 +1837,8 @@ export class AgentSession {
 			if (this._extensionRunner.hasHandlers("session_before_compact")) {
 				const result = (await this._extensionRunner.emit({
 					type: "session_before_compact",
+					model: requestModel,
+					thinkingLevel,
 					preparation,
 					branchEntries: pathEntries,
 					customInstructions,
@@ -1858,7 +1879,7 @@ export class AgentSession {
 					headers,
 					customInstructions,
 					this._compactionAbortController.signal,
-					this.thinkingLevel,
+					thinkingLevel,
 					this.agent.streamFunction,
 					env,
 					this.settingsManager.getRetrySettings(),
@@ -2061,7 +2082,9 @@ export class AgentSession {
 				return false;
 			}
 
-			const { model: requestModel, apiKey, headers, env } = await this._getSummarizationRequestAuth(this.model);
+			const model = this._resolveCompactionModel(settings.model);
+			const thinkingLevel = this._resolveCompactionThinkingLevel(model, settings.thinkingLevel);
+			const { model: requestModel, apiKey, headers, env } = await this._getSummarizationRequestAuth(model);
 
 			const pathEntries = this.sessionManager.getBranch();
 
@@ -2080,6 +2103,8 @@ export class AgentSession {
 			if (this._extensionRunner.hasHandlers("session_before_compact")) {
 				const extensionResult = (await this._extensionRunner.emit({
 					type: "session_before_compact",
+					model: requestModel,
+					thinkingLevel,
 					preparation,
 					branchEntries: pathEntries,
 					customInstructions: undefined,
@@ -2127,7 +2152,7 @@ export class AgentSession {
 					headers,
 					undefined,
 					this._autoCompactionAbortController.signal,
-					this.thinkingLevel,
+					thinkingLevel,
 					this.agent.streamFunction,
 					env,
 					this.settingsManager.getRetrySettings(),

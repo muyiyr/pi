@@ -216,6 +216,25 @@ describe("SettingsManager", () => {
 		});
 	});
 
+	describe("compaction settings", () => {
+		it("returns the configured model and thinking level with defaults", () => {
+			const manager = SettingsManager.inMemory({
+				compaction: {
+					model: "anthropic/claude-haiku-4-5",
+					thinkingLevel: "high",
+				},
+			});
+
+			expect(manager.getCompactionSettings()).toEqual({
+				enabled: true,
+				reserveTokens: 16384,
+				keepRecentTokens: 20000,
+				model: "anthropic/claude-haiku-4-5",
+				thinkingLevel: "high",
+			});
+		});
+	});
+
 	describe("error tracking", () => {
 		it("should collect and clear load errors via drainErrors", () => {
 			const globalSettingsPath = join(agentDir, "settings.json");

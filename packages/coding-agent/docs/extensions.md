@@ -454,8 +454,11 @@ Fired on compaction. See [compaction.md](compaction.md) for details.
 
 ```typescript
 pi.on("session_before_compact", async (event, ctx) => {
-  const { preparation, branchEntries, customInstructions, reason, willRetry, signal } = event;
+  const { model, thinkingLevel, preparation, branchEntries, customInstructions, reason, willRetry, signal } = event;
 
+  // model - effective request model, including any auth-derived endpoint
+  // thinkingLevel - effective level after inheritance and capability clamping
+  // preparation.settings - raw compaction settings, including optional model/thinkingLevel overrides
   // reason - "manual" (/compact), "threshold", or "overflow"
   // willRetry - whether the aborted turn is retried after compaction (overflow recovery)
 

@@ -127,6 +127,8 @@ export interface CompactionSettings {
 	enabled: boolean;
 	reserveTokens: number;
 	keepRecentTokens: number;
+	model?: string;
+	thinkingLevel?: ThinkingLevel;
 }
 
 export const DEFAULT_COMPACTION_SETTINGS: CompactionSettings = {

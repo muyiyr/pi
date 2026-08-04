@@ -278,8 +278,10 @@ Fired before auto-compaction or `/compact`. Can cancel or provide custom summary
 
 ```typescript
 pi.on("session_before_compact", async (event, ctx) => {
-  const { preparation, branchEntries, customInstructions, reason, willRetry, signal } = event;
+  const { model, thinkingLevel, preparation, branchEntries, customInstructions, reason, willRetry, signal } = event;
 
+  // model - effective request model, including any auth-derived endpoint
+  // thinkingLevel - effective level after inheritance and capability clamping
   // preparation.messagesToSummarize - messages to summarize
   // preparation.turnPrefixMessages - split turn prefix (if isSplitTurn)
   // preparation.previousSummary - previous compaction summary
@@ -387,7 +389,9 @@ Configure compaction in `~/.pi/agent/settings.json` or `<project-dir>/.pi/settin
   "compaction": {
     "enabled": true,
     "reserveTokens": 16384,
-    "keepRecentTokens": 20000
+    "keepRecentTokens": 20000,
+    "model": "anthropic/claude-haiku-4-5",
+    "thinkingLevel": "high"
   }
 }
 ```
@@ -397,5 +401,9 @@ Configure compaction in `~/.pi/agent/settings.json` or `<project-dir>/.pi/settin
 | `enabled` | `true` | Enable auto-compaction |
 | `reserveTokens` | `16384` | Tokens to reserve for LLM response |
 | `keepRecentTokens` | `20000` | Recent tokens to keep (not summarized) |
+| `model` | Current model | Model used for manual and automatic compaction |
+| `thinkingLevel` | Current thinking level | Thinking level used for compaction |
 
 Disable auto-compaction with `"enabled": false`. You can still compact manually with `/compact`.
+
+Use an exact `provider/model` reference for `model`; a bare model ID also works when it is unique across providers. The thinking level is clamped to the compaction model's capabilities. Explicit `"off"` disables reasoning for compaction. Branch summarization continues to use the current session model and thinking level.
