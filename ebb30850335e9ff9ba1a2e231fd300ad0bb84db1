@@ -1,0 +1,191 @@
+packages/ai/CONTEXT.md
+  s_5acf144253e187::t_686b4ae8953226 1-21 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7310559bfd7082934c7e52","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Range":[1,21]}]}]}
+CONTEXT-MAP.md
+  s_5acf144253e187::t_686b4ae8953226 1-10 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7310559bfd7082934c7e52","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Range":[1,10]}]}]}
+docs/adr/0001-keep-transcript-viewport-outside-keyboard-focus.md
+  s_5acf144253e187::t_686b4ae8953226 1-3 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7310559bfd7082934c7e52","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Range":[1,3]}]}]}
+CONTEXT.md
+  s_5acf144253e187::t_686b4ae8953226 1-21 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7310559bfd7082934c7e52","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Range":[1,21]}]}]}
+docs/adr/0002-default-unknown-codex-stream-failures-to-retryable.md
+  s_5acf144253e187::t_686b4ae8953226 1-3 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7310559bfd7082934c7e52","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Range":[1,3]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "ebb30850335e9ff9ba1a2e231fd300ad0bb84db1",
+  "prompts": {},
+  "sessions": {
+    "s_5acf144253e187": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a730ac49bfd7082934c7c9e",
+        "model": "gpt-5.6-sol__max",
+        "display_model_name": "GPT-5.6-Sol"
+      },
+      "human_author": "muyiyr <940955635@qq.com>"
+    }
+  },
+  "attestation_metadata": {
+    "CONTEXT-MAP.md": [
+      {
+        "hash": "s_5acf144253e187::t_686b4ae8953226",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              10
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7310559bfd7082934c7e52",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "CONTEXT.md": [
+      {
+        "hash": "s_5acf144253e187::t_686b4ae8953226",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              21
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7310559bfd7082934c7e52",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  21
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "docs/adr/0001-keep-transcript-viewport-outside-keyboard-focus.md": [
+      {
+        "hash": "s_5acf144253e187::t_686b4ae8953226",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              3
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7310559bfd7082934c7e52",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "docs/adr/0002-default-unknown-codex-stream-failures-to-retryable.md": [
+      {
+        "hash": "s_5acf144253e187::t_686b4ae8953226",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              3
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7310559bfd7082934c7e52",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "packages/ai/CONTEXT.md": [
+      {
+        "hash": "s_5acf144253e187::t_686b4ae8953226",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              21
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7310559bfd7082934c7e52",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  21
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_5acf144253e187": {
+      "tool": "trae",
+      "conversation_id": "6a730ac49bfd7082934c7c9e",
+      "session_id": "6a730ac49bfd7082934c7c9e",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_5acf144253e187::t_686b4ae8953226": {
+      "tool": "trae",
+      "conversation_id": "6a730ac49bfd7082934c7c9e",
+      "session_id": "6a730ac49bfd7082934c7c9e",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
