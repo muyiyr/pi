@@ -1,0 +1,145 @@
+packages/coding-agent/examples/rpc-extension-ui.ts
+  s_7ef3d5bd77e6fb::t_e344b3599a1693 176-179
+packages/coding-agent/src/modes/interactive/components/oauth-selector.ts
+  s_7ef3d5bd77e6fb::t_d1390ed2421b4a 191
+  s_7ef3d5bd77e6fb::t_8e82c11706aa48 33-36
+  s_7ef3d5bd77e6fb::t_5de69ded4f78d7 192-194
+packages/coding-agent/src/modes/interactive/components/extension-selector.ts
+  s_7ef3d5bd77e6fb::t_f6b774daf26302 22-25
+  s_7ef3d5bd77e6fb::t_54f5e01b766305 111
+  s_7ef3d5bd77e6fb::t_6bc179342b2dcd 100,109-110
+packages/coding-agent/examples/extensions/tools.ts
+  s_7ef3d5bd77e6fb::t_69a19985df5639 119,124
+packages/coding-agent/src/modes/interactive/components/trust-selector.ts
+  s_7ef3d5bd77e6fb::t_09e6020f54583f 139
+  s_7ef3d5bd77e6fb::t_acdcb210127b35 124-130,137-138
+  s_7ef3d5bd77e6fb::t_d8ca62b48ac2ce 34-37
+packages/coding-agent/examples/extensions/preset.ts
+  s_7ef3d5bd77e6fb::t_063c6c4c9665b2 254,259
+packages/tui/src/tui.ts
+  s_7ef3d5bd77e6fb::t_b36fd5f722e8c8 217-220
+  s_7ef3d5bd77e6fb::t_a711256b115bb9 36-38
+packages/coding-agent/src/modes/interactive/components/model-selector.ts
+  s_7ef3d5bd77e6fb::t_f0f48c35884382 38-41
+  s_7ef3d5bd77e6fb::t_a54501decf13d4 327,349-351
+packages/coding-agent/src/modes/interactive/components/config-selector.ts
+  s_7ef3d5bd77e6fb::t_89cb67c22d8977 223
+packages/coding-agent/src/modes/interactive/components/scoped-models-selector.ts
+  s_7ef3d5bd77e6fb::t_2189c80667cf90 94-97
+  s_7ef3d5bd77e6fb::t_d3bbdf8673bccd 289,304-305
+  s_7ef3d5bd77e6fb::t_538efc65c4d259 306-308
+packages/coding-agent/src/modes/interactive/components/select-navigation.ts
+  s_7ef3d5bd77e6fb::t_6a3ae3c062cd7d 1-17 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7362d39bfd7082934ca1ee","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[1,17]}]}]}
+packages/coding-agent/src/extensions/llama/ui.ts
+  s_7ef3d5bd77e6fb::t_2644f0518f5b1d 252-258,273-274
+  s_7ef3d5bd77e6fb::t_9dbe67c9f4c724 99-102
+  s_7ef3d5bd77e6fb::t_44c418e2defe70 156-159,161,275-277,302,325-328,331
+packages/coding-agent/src/modes/interactive/components/session-selector.ts
+  s_7ef3d5bd77e6fb::t_05fb900e2a86a7 285
+  s_7ef3d5bd77e6fb::t_b9d2808f14f364 536-542,619-620
+packages/coding-agent/test/suite/regressions/7629-select-page-keys.test.ts
+  s_7ef3d5bd77e6fb::t_e4422abd2e1b10 155-165
+  s_7ef3d5bd77e6fb::t_83d4e5848dc9b1 168-176
+  s_7ef3d5bd77e6fb::t_4784eafcb17e59 208
+  s_7ef3d5bd77e6fb::t_9d153a20db17e9 227-245
+  s_7ef3d5bd77e6fb::t_c513750723e236 246
+  s_7ef3d5bd77e6fb::t_ffeb9647c2d82e 189-199
+  s_7ef3d5bd77e6fb::t_3689a8af53a20c 1-3
+  s_7ef3d5bd77e6fb::t_e144d8eabb769d 201-205
+  s_7ef3d5bd77e6fb::t_cb6b23dcf8db86 209
+  s_7ef3d5bd77e6fb::t_dc0423909b0bf5 210-215
+  s_7ef3d5bd77e6fb::t_245ce0988161f2 248
+  s_7ef3d5bd77e6fb::t_aef5387d4dafb2 217-224
+  s_7ef3d5bd77e6fb::t_c69a57e03dd62b 179-186
+  s_7ef3d5bd77e6fb::t_6ae97711dd8ff3 4-154,166-167,177-178,187-188,200,206-207,216,225-226,247
+packages/tui/src/components/settings-list.ts
+  s_7ef3d5bd77e6fb::t_e202a5790c26bd 36
+  s_7ef3d5bd77e6fb::t_b656ac0fa1ed30 3,181,188-190
+packages/coding-agent/src/modes/interactive/components/user-message-selector.ts
+  s_7ef3d5bd77e6fb::t_291bd4d76a1177 85,93-94
+  s_7ef3d5bd77e6fb::t_3b1433fdf3e0a0 16
+packages/coding-agent/src/modes/interactive/components/tree-selector.ts
+  s_7ef3d5bd77e6fb::t_b8c29c70186275 108
+  s_7ef3d5bd77e6fb::t_ab2ee6a49ad4b8 1000-1006,1027,1029,1031-1032
+packages/tui/src/components/editor.ts
+  s_7ef3d5bd77e6fb::t_311f013685dfb2 280-283
+packages/tui/src/components/select-list.ts
+  s_7ef3d5bd77e6fb::t_78ed5d8bf31314 2,116-122,132-134
+  s_7ef3d5bd77e6fb::t_68db0b57bc63e2 135
+  s_7ef3d5bd77e6fb::t_bdc11077120557 42
+packages/coding-agent/src/modes/interactive/components/first-time-setup.ts
+  s_7ef3d5bd77e6fb::t_f3caaeeeaeea8c 132
+  s_7ef3d5bd77e6fb::t_b3a28bdbcae7db 33-36,131
+  s_7ef3d5bd77e6fb::t_c2cdd958e2ee2e 129-130
+packages/tui/test/tui-alt-screen.test.ts
+  s_7ef3d5bd77e6fb::t_003450bbbc13dd 449-451
+  s_7ef3d5bd77e6fb::t_db11d9399a0b37 3,19,358-405
+  s_7ef3d5bd77e6fb::t_a922872da89e70 7,406-448
+packages/tui/src/selection-navigation.ts
+  s_7ef3d5bd77e6fb::t_8233ecaebff8af 1-17
+packages/tui/src/tui-alt-screen.ts
+  s_7ef3d5bd77e6fb::t_96339d13da3b7d 376-382
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d139dfcd8ec42ebd90fe337c5ed8505f3f07bd81",
+  "prompts": {},
+  "sessions": {
+    "s_7ef3d5bd77e6fb": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a734d839bfd7082934c888f",
+        "model": "gpt-5.6-sol__max"
+      },
+      "human_author": null
+    }
+  },
+  "attestation_metadata": {
+    "packages/coding-agent/src/modes/interactive/components/select-navigation.ts": [
+      {
+        "hash": "s_7ef3d5bd77e6fb::t_6a3ae3c062cd7d",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              17
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7362d39bfd7082934ca1ee",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  17
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_7ef3d5bd77e6fb": {
+      "tool": "trae",
+      "conversation_id": "6a734d839bfd7082934c888f",
+      "session_id": "6a734d839bfd7082934c888f",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7ef3d5bd77e6fb::t_6a3ae3c062cd7d": {
+      "tool": "trae",
+      "conversation_id": "6a734d839bfd7082934c888f",
+      "session_id": "6a734d839bfd7082934c888f",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
