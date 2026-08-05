@@ -1,0 +1,202 @@
+packages/coding-agent/test/suite/regressions/7673-file-line-ranges.test.ts
+  s_15fec7fcfe9e43::t_f0e1213bfc8b12 5,8,25,27,33,37,42-49,61,71,82,91,100,109,114-128 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7370d99bfd7082934cb20e","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":5},{"Single":8},{"Single":25},{"Single":27},{"Single":33},{"Single":37},{"Range":[42,49]},{"Single":61},{"Single":71},{"Single":82},{"Single":91},{"Single":100},{"Single":109},{"Range":[114,128]}]}]}
+  s_15fec7fcfe9e43::t_e816671e4d63db 129
+packages/coding-agent/src/cli/file-processor.ts
+  s_15fec7fcfe9e43::t_caf17486b82ffd 5,9,77 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7370bb9bfd7082934cb1c8","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":5},{"Single":9},{"Single":77}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8b29f63ab1a433889c4786f6e7fcc6ba10ca474e",
+  "prompts": {},
+  "sessions": {
+    "s_15fec7fcfe9e43": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a7365759bfd7082934ca44f",
+        "model": "gpt-5.6-sol__max"
+      },
+      "human_author": "muyiyr <940955635@qq.com>"
+    }
+  },
+  "attestation_metadata": {
+    "packages/coding-agent/src/cli/file-processor.ts": [
+      {
+        "hash": "s_15fec7fcfe9e43::t_caf17486b82ffd",
+        "line_ranges": [
+          {
+            "Single": 5
+          },
+          {
+            "Single": 9
+          },
+          {
+            "Single": 77
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7370bb9bfd7082934cb1c8",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 5
+              },
+              {
+                "Single": 9
+              },
+              {
+                "Single": 77
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "packages/coding-agent/test/suite/regressions/7673-file-line-ranges.test.ts": [
+      {
+        "hash": "s_15fec7fcfe9e43::t_f0e1213bfc8b12",
+        "line_ranges": [
+          {
+            "Single": 5
+          },
+          {
+            "Single": 8
+          },
+          {
+            "Single": 25
+          },
+          {
+            "Single": 27
+          },
+          {
+            "Single": 33
+          },
+          {
+            "Single": 37
+          },
+          {
+            "Range": [
+              42,
+              49
+            ]
+          },
+          {
+            "Single": 61
+          },
+          {
+            "Single": 71
+          },
+          {
+            "Single": 82
+          },
+          {
+            "Single": 91
+          },
+          {
+            "Single": 100
+          },
+          {
+            "Single": 109
+          },
+          {
+            "Range": [
+              114,
+              128
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7370d99bfd7082934cb20e",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 5
+              },
+              {
+                "Single": 8
+              },
+              {
+                "Single": 25
+              },
+              {
+                "Single": 27
+              },
+              {
+                "Single": 33
+              },
+              {
+                "Single": 37
+              },
+              {
+                "Range": [
+                  42,
+                  49
+                ]
+              },
+              {
+                "Single": 61
+              },
+              {
+                "Single": 71
+              },
+              {
+                "Single": 82
+              },
+              {
+                "Single": 91
+              },
+              {
+                "Single": 100
+              },
+              {
+                "Single": 109
+              },
+              {
+                "Range": [
+                  114,
+                  128
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_15fec7fcfe9e43": {
+      "tool": "trae",
+      "conversation_id": "6a7365759bfd7082934ca44f",
+      "session_id": "6a7365759bfd7082934ca44f",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_15fec7fcfe9e43::t_279d2d2987de01": {
+      "tool": "trae",
+      "conversation_id": "6a7365759bfd7082934ca44f",
+      "session_id": "6a7365759bfd7082934ca44f",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_15fec7fcfe9e43::t_caf17486b82ffd": {
+      "tool": "trae",
+      "conversation_id": "6a7365759bfd7082934ca44f",
+      "session_id": "6a7365759bfd7082934ca44f",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_15fec7fcfe9e43::t_f0e1213bfc8b12": {
+      "tool": "trae",
+      "conversation_id": "6a7365759bfd7082934ca44f",
+      "session_id": "6a7365759bfd7082934ca44f",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
