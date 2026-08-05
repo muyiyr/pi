@@ -1,0 +1,273 @@
+packages/ai/src/api/openai-codex-responses.ts
+  s_33157fbcdc7241::t_eb91939dd079dc 62,73-86,315-316,328,367-370,372-377,380-396,401,408,411,710,713-716,720,737-751,754-755,758-762,766,782,785,791-800 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a72f1179bfd7082934c6dac","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Single":62},{"Range":[73,86]},{"Range":[315,316]},{"Single":328},{"Range":[367,370]},{"Range":[372,377]},{"Range":[380,396]},{"Single":401},{"Single":408},{"Single":411},{"Single":710},{"Range":[713,716]},{"Single":720},{"Range":[737,751]},{"Range":[754,755]},{"Range":[758,762]},{"Single":766},{"Single":782},{"Single":785},{"Range":[791,800]}]}]}
+packages/ai/test/openai-codex-websocket-errors.test.ts
+  s_33157fbcdc7241::t_bbb152f9f19309 1-435 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a72f4ac9bfd7082934c70c6","tool_type":"agent","tool_id":"exec_command","line_ranges":[{"Range":[1,435]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "780481dc0d5177f9f39e36a9b61d39aa8efaf19c",
+  "prompts": {},
+  "sessions": {
+    "s_33157fbcdc7241": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a71dbff9bfd7082934c30b8",
+        "model": "gpt-5.6-sol__max",
+        "display_model_name": "GPT-5.6-Sol"
+      },
+      "human_author": "muyiyr <940955635@qq.com>"
+    }
+  },
+  "attestation_metadata": {
+    "packages/ai/src/api/openai-codex-responses.ts": [
+      {
+        "hash": "s_33157fbcdc7241::t_eb91939dd079dc",
+        "line_ranges": [
+          {
+            "Single": 62
+          },
+          {
+            "Range": [
+              73,
+              86
+            ]
+          },
+          {
+            "Range": [
+              315,
+              316
+            ]
+          },
+          {
+            "Single": 328
+          },
+          {
+            "Range": [
+              367,
+              370
+            ]
+          },
+          {
+            "Range": [
+              372,
+              377
+            ]
+          },
+          {
+            "Range": [
+              380,
+              396
+            ]
+          },
+          {
+            "Single": 401
+          },
+          {
+            "Single": 408
+          },
+          {
+            "Single": 411
+          },
+          {
+            "Single": 710
+          },
+          {
+            "Range": [
+              713,
+              716
+            ]
+          },
+          {
+            "Single": 720
+          },
+          {
+            "Range": [
+              737,
+              751
+            ]
+          },
+          {
+            "Range": [
+              754,
+              755
+            ]
+          },
+          {
+            "Range": [
+              758,
+              762
+            ]
+          },
+          {
+            "Single": 766
+          },
+          {
+            "Single": 782
+          },
+          {
+            "Single": 785
+          },
+          {
+            "Range": [
+              791,
+              800
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a72f1179bfd7082934c6dac",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Single": 62
+              },
+              {
+                "Range": [
+                  73,
+                  86
+                ]
+              },
+              {
+                "Range": [
+                  315,
+                  316
+                ]
+              },
+              {
+                "Single": 328
+              },
+              {
+                "Range": [
+                  367,
+                  370
+                ]
+              },
+              {
+                "Range": [
+                  372,
+                  377
+                ]
+              },
+              {
+                "Range": [
+                  380,
+                  396
+                ]
+              },
+              {
+                "Single": 401
+              },
+              {
+                "Single": 408
+              },
+              {
+                "Single": 411
+              },
+              {
+                "Single": 710
+              },
+              {
+                "Range": [
+                  713,
+                  716
+                ]
+              },
+              {
+                "Single": 720
+              },
+              {
+                "Range": [
+                  737,
+                  751
+                ]
+              },
+              {
+                "Range": [
+                  754,
+                  755
+                ]
+              },
+              {
+                "Range": [
+                  758,
+                  762
+                ]
+              },
+              {
+                "Single": 766
+              },
+              {
+                "Single": 782
+              },
+              {
+                "Single": 785
+              },
+              {
+                "Range": [
+                  791,
+                  800
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "packages/ai/test/openai-codex-websocket-errors.test.ts": [
+      {
+        "hash": "s_33157fbcdc7241::t_bbb152f9f19309",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              435
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a72f4ac9bfd7082934c70c6",
+            "tool_type": "agent",
+            "tool_id": "exec_command",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  435
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_33157fbcdc7241": {
+      "tool": "trae",
+      "conversation_id": "6a71dbff9bfd7082934c30b8",
+      "session_id": "6a71dbff9bfd7082934c30b8",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_33157fbcdc7241::t_bbb152f9f19309": {
+      "tool": "trae",
+      "conversation_id": "6a71dbff9bfd7082934c30b8",
+      "session_id": "6a71dbff9bfd7082934c30b8",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_33157fbcdc7241::t_eb91939dd079dc": {
+      "tool": "trae",
+      "conversation_id": "6a71dbff9bfd7082934c30b8",
+      "session_id": "6a71dbff9bfd7082934c30b8",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
