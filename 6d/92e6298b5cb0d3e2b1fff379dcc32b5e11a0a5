@@ -1,0 +1,270 @@
+packages/coding-agent/docs/skills.md
+  s_7452636d028fb7::t_192c8fa6b1a352 40,187 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7af799c7f2c4947f14c6b3","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":40},{"Single":187}]}]}
+packages/coding-agent/src/core/skills.ts
+  s_7452636d028fb7::t_524290599aa069 117,120-122,282,296-300,304,327-328 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7af771c7f2c4947f14c683","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":117},{"Range":[120,122]},{"Single":282},{"Range":[296,300]},{"Single":304},{"Range":[327,328]}]}]}
+  s_7452636d028fb7::t_522002555243c2 329-330
+packages/coding-agent/test/suite/regressions/7805-custom-skill-directory-docs.test.ts
+  s_7452636d028fb7::t_d68607b6e180af 59-79 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7af7c0c7f2c4947f14c6dc","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Range":[59,79]}]}]}
+packages/coding-agent/test/skills.test.ts
+  s_7452636d028fb7::t_1e4bd0a0ce6c55 120 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7af7d8c7f2c4947f14c706","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":120}]}]}
+  s_7452636d028fb7::t_6e57bf23bba287 77,84,127,130,137 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a7af786c7f2c4947f14c69b","tool_type":"agent","tool_id":"apply_patch","line_ranges":[{"Single":77},{"Single":84},{"Single":127},{"Single":130},{"Single":137}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "6d92e6298b5cb0d3e2b1fff379dcc32b5e11a0a5",
+  "prompts": {},
+  "sessions": {
+    "s_7452636d028fb7": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a7ae59dc7f2c4947f14bae4",
+        "model": "gpt-5.6-sol__max"
+      },
+      "human_author": "muyiyr <940955635@qq.com>"
+    }
+  },
+  "attestation_metadata": {
+    "packages/coding-agent/docs/skills.md": [
+      {
+        "hash": "s_7452636d028fb7::t_192c8fa6b1a352",
+        "line_ranges": [
+          {
+            "Single": 40
+          },
+          {
+            "Single": 187
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7af799c7f2c4947f14c6b3",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 40
+              },
+              {
+                "Single": 187
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "packages/coding-agent/src/core/skills.ts": [
+      {
+        "hash": "s_7452636d028fb7::t_524290599aa069",
+        "line_ranges": [
+          {
+            "Single": 117
+          },
+          {
+            "Range": [
+              120,
+              122
+            ]
+          },
+          {
+            "Single": 282
+          },
+          {
+            "Range": [
+              296,
+              300
+            ]
+          },
+          {
+            "Single": 304
+          },
+          {
+            "Range": [
+              327,
+              328
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7af771c7f2c4947f14c683",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 117
+              },
+              {
+                "Range": [
+                  120,
+                  122
+                ]
+              },
+              {
+                "Single": 282
+              },
+              {
+                "Range": [
+                  296,
+                  300
+                ]
+              },
+              {
+                "Single": 304
+              },
+              {
+                "Range": [
+                  327,
+                  328
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "packages/coding-agent/test/skills.test.ts": [
+      {
+        "hash": "s_7452636d028fb7::t_1e4bd0a0ce6c55",
+        "line_ranges": [
+          {
+            "Single": 120
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7af7d8c7f2c4947f14c706",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 120
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "hash": "s_7452636d028fb7::t_6e57bf23bba287",
+        "line_ranges": [
+          {
+            "Single": 77
+          },
+          {
+            "Single": 84
+          },
+          {
+            "Single": 127
+          },
+          {
+            "Single": 130
+          },
+          {
+            "Single": 137
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7af786c7f2c4947f14c69b",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Single": 77
+              },
+              {
+                "Single": 84
+              },
+              {
+                "Single": 127
+              },
+              {
+                "Single": 130
+              },
+              {
+                "Single": 137
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "packages/coding-agent/test/suite/regressions/7805-custom-skill-directory-docs.test.ts": [
+      {
+        "hash": "s_7452636d028fb7::t_d68607b6e180af",
+        "line_ranges": [
+          {
+            "Range": [
+              59,
+              79
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a7af7c0c7f2c4947f14c6dc",
+            "tool_type": "agent",
+            "tool_id": "apply_patch",
+            "line_ranges": [
+              {
+                "Range": [
+                  59,
+                  79
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_7452636d028fb7": {
+      "tool": "trae",
+      "conversation_id": "6a7ae59dc7f2c4947f14bae4",
+      "session_id": "6a7ae59dc7f2c4947f14bae4",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7452636d028fb7::t_192c8fa6b1a352": {
+      "tool": "trae",
+      "conversation_id": "6a7ae59dc7f2c4947f14bae4",
+      "session_id": "6a7ae59dc7f2c4947f14bae4",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7452636d028fb7::t_1e4bd0a0ce6c55": {
+      "tool": "trae",
+      "conversation_id": "6a7ae59dc7f2c4947f14bae4",
+      "session_id": "6a7ae59dc7f2c4947f14bae4",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7452636d028fb7::t_524290599aa069": {
+      "tool": "trae",
+      "conversation_id": "6a7ae59dc7f2c4947f14bae4",
+      "session_id": "6a7ae59dc7f2c4947f14bae4",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7452636d028fb7::t_6e57bf23bba287": {
+      "tool": "trae",
+      "conversation_id": "6a7ae59dc7f2c4947f14bae4",
+      "session_id": "6a7ae59dc7f2c4947f14bae4",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_7452636d028fb7::t_d68607b6e180af": {
+      "tool": "trae",
+      "conversation_id": "6a7ae59dc7f2c4947f14bae4",
+      "session_id": "6a7ae59dc7f2c4947f14bae4",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
