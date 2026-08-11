@@ -1,3 +1,4 @@
+import { Type } from "typebox";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { getModel, streamSimple } from "../src/compat.ts";
 
@@ -165,12 +166,23 @@ describe("openai-completions empty tools handling", () => {
 		process.env.CLOUDFLARE_ACCOUNT_ID = "account-id";
 		process.env.CLOUDFLARE_GATEWAY_ID = "gateway-id";
 		const model = getModel("cloudflare-ai-gateway", "workers-ai/@cf/moonshotai/kimi-k2.6")!;
+		expect(model.compat?.supportsStrictMode).toBe(false);
 
 		await streamSimple(
 			model,
 			{
 				systemPrompt: "You are helpful.",
 				messages: [{ role: "user", content: "hi", timestamp: Date.now() }],
+				tools: [
+					{
+						name: "read",
+						description: "Read a file",
+						parameters: Type.Object({
+							path: Type.String(),
+							offset: Type.Optional(Type.Number()),
+						}),
+					},
+				],
 			},
 			{ maxTokens: 1234, reasoning: "high" },
 		).result();
@@ -181,12 +193,17 @@ describe("openai-completions empty tools handling", () => {
 			max_completion_tokens?: number;
 			reasoning_effort?: string;
 			store?: boolean;
+			tools?: Array<{ function?: Record<string, unknown> }>;
 		};
 		expect(params.messages[0].role).toBe("system");
 		expect(params.max_tokens).toBe(1234);
 		expect(params.max_completion_tokens).toBeUndefined();
 		expect(params.reasoning_effort).toBeUndefined();
 		expect(params.store).toBeUndefined();
+		const tool = params.tools?.[0]?.function;
+		expect(tool).toBeTruthy();
+		expect(tool).not.toHaveProperty("strict");
+		expect("strict" in (tool ?? {})).toBe(false);
 
 		const clientOptions = mockState.lastClientOptions as {
 			baseURL?: string;
