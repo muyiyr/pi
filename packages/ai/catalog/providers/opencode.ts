@@ -18,6 +18,8 @@ import { enableOpenAiGrammarTools, enableOpenAiMidConvoSystemMessages } from "..
 import { getEffortThinkingLevelMap } from "../reasoning.ts";
 import type { ModelsDevModel } from "../sources/models-dev.ts";
 
+const ALWAYS_THINKING_MODEL_IDS = new Set(["kimi-k2.7-code", "kimi-k2.7-code-highspeed"]);
+
 // OpenAI-compatible endpoints reject the long prompt-cache retention parameter for these models.
 const LONG_CACHE_RETENTION_UNSUPPORTED_MODELS = new Set([
 	"opencode:deepseek-v4-flash",
@@ -92,9 +94,9 @@ export function opencodeModels(ctx: ProviderContext): ChatModel[] {
 			if (provider === "opencode" && model.id === "grok-build-0.1") {
 				compat = { ...compat, supportsReasoningEffort: false };
 			}
-			if (model.id === "kimi-k2.6") {
-				// OpenCode Kimi K2.6 accepts Anthropic-style thinking objects
-				// and rejects string thinking values or combined reasoning_effort.
+			if (model.id === "kimi-k2.6" || ALWAYS_THINKING_MODEL_IDS.has(model.id)) {
+				// OpenCode Kimi K2.6/K2.7 accept thinking objects
+				// and reject string thinking values or combined reasoning_effort.
 				compat = { ...compat, thinkingFormat: "deepseek", supportsReasoningEffort: false };
 			}
 			// models.dev reports these as @ai-sdk/anthropic, but OpenCode Go serves
@@ -148,6 +150,10 @@ export const OPENCODE_COMPLETIONS_COMPAT = {
 
 /** Behavior shared by OpenCode Zen and Go. */
 export function finalizeOpencodeModel(model: ChatModel): void {
+	if (ALWAYS_THINKING_MODEL_IDS.has(model.id)) {
+		// K2.7 Code is always-thinking and rejects thinking: { type: "disabled" }.
+		mergeThinking(model, { off: null });
+	}
 	if (model.provider === "opencode-go" && model.id === "glm-5.2") {
 		mergeThinking(model, { off: null, minimal: null, low: null, medium: null, high: "high", max: "max" });
 	}
